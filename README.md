@@ -63,7 +63,7 @@ pip install streamlit folium osmnx networkx geopy shapely pandas streamlit-foliu
 
 ```bash
 Run start_app.sh
-or
+# or
 streamlit run IS_Project.py
 ```
 
