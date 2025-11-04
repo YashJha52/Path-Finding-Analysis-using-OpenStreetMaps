@@ -1,59 +1,91 @@
-🗺️ Path-Finding-Analysis-using-OpenStreetMaps
-An interactive Streamlit web app that visualizes and compares real-world pathfinding algorithms — A*, Dijkstra, BFS, and Flood Fill — on actual OpenStreetMap road networks using OSMnx, NetworkX, and Folium.
-🌟 Features
-🌍 Real-World Map Integration (via OSMnx)
-Load live road networks for cities worldwide or custom coordinates.
-🧭 Pathfinding Algorithms
-A* – Heuristic search using geodesic distance
-Dijkstra’s Algorithm – Shortest path in weighted graphs
-Breadth-First Search (BFS) – Level-wise exploration
-Flood Fill (DFS-style) – Randomized exhaustive exploration
-🧮 Performance Comparison Dashboard
-Displays path length, explored nodes, efficiency %, and estimated travel time
-Color-coded results table with automatic highlighting of best metrics
-🗺️ Interactive Map Visualization
-Start/Goal markers
-Color-coded algorithm paths
-Dynamic zoom to fit all routes
-Custom legend and tooltips
-🧠 Educational Insights
-Built-in explanations for each algorithm
-Ideal for teaching AI, data structures, and graph algorithms using real maps
-🧩 Flexible Input Options
-Use location names (e.g., “Andheri, Mumbai”)
-Or input latitude & longitude directly
-⚙️ Simulated Map Mode
-Automatically activates when OSMnx is unavailable
-Perfect for offline testing and demonstrations
-🧰 Tech Stack
-Component	Technology
-Frontend/UI	Streamlit
-Maps & Visualization	Folium + Leaflet
-Routing Data	OSMnx (OpenStreetMap)
-Graph Processing	NetworkX
-Geocoding & Distance	Geopy
-Geometry Handling	Shapely
-Data Display	Pandas + Styled Tables
-💻 Installation
-1️⃣ Clone the Repository
-git clone https://github.com/yourusername/pathfinding-app.git
-cd pathfinding-app
-2️⃣ Install Dependencies
+# Path-Finding Analysis using OpenStreetMap
+
+An interactive Streamlit web app that visualizes and compares real-world pathfinding algorithms — A*, Dijkstra, BFS, and Flood Fill — on OpenStreetMap road networks using OSMnx and NetworkX. The app is designed for learning, teaching, and demoing pathfinding and graph algorithms on real map data.
+
+## Features
+
+- Real-World Map Integration (via OSMnx)
+  - Load road networks for cities worldwide or custom coordinates.
+- Pathfinding Algorithms
+  - A* — Heuristic search using geodesic distance
+  - Dijkstra — Shortest path in weighted graphs
+  - Breadth-First Search (BFS) — Level-wise exploration
+  - Flood Fill (DFS-style) — Exhaustive exploration variant
+- Performance Comparison Dashboard
+  - Displays path length, explored nodes, efficiency %, and estimated travel time
+  - Color-coded results table with automatic highlighting of best metrics
+- Interactive Map Visualization (Folium + Leaflet)
+  - Start/Goal markers and color-coded algorithm paths
+  - Dynamic zoom to fit all routes and custom legend/tooltips
+- Educational Insights
+  - Explanations for each algorithm and visualization of exploration behavior
+- Flexible Input Options
+  - Use location names (e.g., "Andheri, Mumbai") or input latitude & longitude directly
+- Simulated Map Mode
+  - Activates when OSMnx is unavailable so the app works offline for demos/tests
+
+## Tech Stack
+
+- Frontend/UI: Streamlit
+- Maps & Visualization: Folium + Leaflet
+- Routing Data: OSMnx (OpenStreetMap)
+- Graph Processing: NetworkX
+- Geocoding & Distance: Geopy
+- Geometry Handling: Shapely
+- Data Display: Pandas + Styled Tables
+
+## Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/YashJha52/Path-Finding-Analysis-using-OpenStreetMaps.git
+cd Path-Finding-Analysis-using-OpenStreetMaps
+```
+
+2. (Optional) Create and activate a virtual environment
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # macOS/Linux
+.\.venv\Scripts\activate  # Windows (PowerShell)
+```
+
+3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+# or install individually:
 pip install streamlit folium osmnx networkx geopy shapely pandas streamlit-folium
-💡 Optional: Create a virtual environment before installing dependencies.
-3️⃣ Run the App
+```
+
+4. Run the app
+
+```bash
 streamlit run app.py
-⚙️ How It Works
-Select a city or enter coordinates.
-The app loads the road network using OSMnx (or creates a simulated grid).
-Click “🚀 Run Algorithms” to compute paths between Start and Goal nodes.
-The results are visualized on an interactive map and summarized in a performance table.
-📸 Example Preview
-(Add a screenshot of your app running here — for example:)
-“A* and Dijkstra’s paths between Andheri and Kandivali visualized on OpenStreetMap.”
-📜 License
+```
+
+## Usage
+
+1. Select a city or enter custom coordinates.
+2. Set Start and Goal locations (either by clicking on the map or entering coordinates).
+3. Click "Run Algorithms" to compute and visualize routes.
+4. Compare metrics in the performance table and view each algorithm's path on the map.
+
+## Example Preview
+
+_Add a screenshot of the app here (e.g., A* and Dijkstra paths visualized on OpenStreetMap)._ 
+
+## Development Notes
+
+- If OSMnx cannot download map data (e.g., offline), the app falls back to a simulated grid network for demonstrations.
+- Performance metrics are computed from NetworkX path results and on-screen exploration statistics.
+- Tweak map tile providers in the app for different visual styles.
+
+## Contributing
+
+Contributions are welcome. Please open issues or pull requests for bug reports, improvements, or feature requests.
+
+## License
+
 MIT License © 2025 — Open for educational and research use.
-✅ Perfect for:
-AI and ML students learning search algorithms
-Teaching graph theory and pathfinding
-Visual demos for route optimization and navigation algorithms
